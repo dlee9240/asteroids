@@ -25,6 +25,8 @@ def main():
             
         screen.fill("black")
         pygame.display.flip()
+
+        #FPS
         dt = clock.tick(60) / 1000
 
 
