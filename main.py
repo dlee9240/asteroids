@@ -20,18 +20,33 @@ def main():
 
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
-    player_1 = Player(x,y)
 
+    #creating two groups
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+
+    #adding player_1 into the two groups using pygame methods
+    Player.containers = (updatable, drawable)
+
+    #create object after these groups so they get into groups
+    player = Player(x,y)
     
+    #Game loop
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
             
         #Solution had this as the top line in the while statement...
-        player_1.update(dt)    
+        #update before draw!!! This makes sense
+        
+        for u in updatable:
+            u.update(dt)
+        #updatable.update(dt)    
         screen.fill("black")
-        player_1.draw(screen) 
+        for d in drawable:
+            d.draw(screen)
+        #drawable.draw(screen) 
         pygame.display.flip()
        
         #FPS

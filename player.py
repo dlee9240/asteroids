@@ -3,6 +3,7 @@ from constants import *
 
 class Player(CircleShape):
 
+    
     def __init__(self, x, y):
         #item 3 in Draw Player - Call super class constructor and pass in PLAYER_RADIUS
         super().__init__(x,y,PLAYER_RADIUS)
