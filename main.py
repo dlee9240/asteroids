@@ -2,6 +2,7 @@
 # the open-source pygame library
 # throughout this file
 import pygame
+import sys
 from constants import *
 from player import *
 from asteroid import *
@@ -54,9 +55,17 @@ def main():
         #Solution had this as the top line in the while statement...
         #update before draw!!! This makes sense
         
-        for u in updatable:
-            u.update(dt)
-        #updatable.update(dt)    
+        #for u in updatable:
+        #    u.update(dt)
+        updatable.update(dt)
+
+        #checking for collisions
+        for a in asteroids:
+            if a.collides_with(player):
+                print("Game Over!")
+                sys.exit()
+            
+
         screen.fill("black")
         for d in drawable:
             d.draw(screen)
