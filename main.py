@@ -68,6 +68,11 @@ def main():
             if a.collides_with(player):
                 print("Game Over!")
                 sys.exit()
+
+            for shot in shots:
+                if a.collides_with(shot):
+                    shot.kill()
+                    a.kill()
             
 
         screen.fill("black")
