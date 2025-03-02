@@ -72,7 +72,7 @@ def main():
             for shot in shots:
                 if a.collides_with(shot):
                     shot.kill()
-                    a.kill()
+                    a.split()
             
 
         screen.fill("black")
