@@ -40,7 +40,8 @@ class Asteroid(CircleShape):
             child_asteroid1.velocity = new_rotation1 * 1.2
             child_asteroid2.velocity = new_rotation2 * 1.2
 
-
+            #this line was added on 3/23/26
+            
 
 
 
