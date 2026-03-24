@@ -13,4 +13,7 @@ class Shot(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
-        
+
+
+#adding a comment to push and fetch again... 3/23/26 8:57pm
+
