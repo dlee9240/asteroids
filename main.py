@@ -67,4 +67,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+#adding on 3.25.26 on my laptop to see if I can push all this to my mac mini and work computer from git...
